@@ -1,0 +1,975 @@
+.section-gap {
+	padding: 120px 0px;
+	@media(max-width: 1024px) {
+        padding: 80px 0px;
+    }
+    @media(max-width: 992px) {
+        padding: 60px 0px;
+    }
+}
+.section-gap-bottom {
+	padding-bottom: 120px;
+	@media(max-width: 1024px) {
+        padding-bottom: 80px;
+    }
+    @media(max-width: 992px) {
+        padding-bottom: 60px;
+    }
+}
+
+.section-title {
+    padding-bottom: 30px;
+    h2 {
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 16px;
+        margin-bottom: 0;
+        @include media-breakpoint-down (md) {
+            br {
+                display: none;
+            }
+        }
+    }
+}
+
+.primary-btn {
+    height: 40px;
+    line-height: 40px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 25px;
+    background: $primary-color;
+    border: none;
+    color: $white;
+    display: inline-block;
+    font-weight: 500;
+    position: relative;
+    @include transition();
+    cursor: pointer;
+    &:focus {
+        outline: none;
+    }
+    span {
+        color: $white;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-60%);
+        right: 30px;
+        @include transition();
+    }
+    &:after {
+        position: absolute;
+        content: "";
+        background: $primary-color;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        opacity: 0;
+        @include transition();
+        z-index: 1;
+    }
+    &:hover {
+        color: $white;
+        span {
+            color: $white;
+            right: 20px;
+        }
+    }
+}
+
+.primary-btn2 {
+    display: inline-block;
+    outline: none;
+    line-height: 28px;
+    padding: 0 30px;
+    border: 1px solid #222222;
+    font-size: .8em;
+    text-align: center;
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+    @include transition();
+    &:focus {
+        outline: none;
+    }
+    &.e-large {
+        padding: 0 40px;
+        line-height: 50px;
+    }
+    &.large {
+        line-height: 45px;
+    }
+    &.medium {
+        line-height: 30px;
+    }
+    &.small {
+        line-height: 25px;
+    }
+    &.radius {
+        border-radius: 3px;
+    }
+    &.circle {
+        border-radius: 20px;
+    }
+    &.arrow {
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        span {
+            margin-left: 10px;
+        }
+    }
+    &.primary-border {
+        color: $black;
+        font-weight: 600;
+        border: 1px solid $text-color;
+        background: $white;
+        &:hover {
+            color: $white;
+            background: $primary-color;
+            border: 1px solid #fff;
+            border: none;
+        }
+    }
+}
+
+.white_bg_btn{
+	display: inline-block;
+	background: #f9f9ff;
+	padding: 0px 35px;
+	color: $title-color;
+	font-size: 13px;
+    font-weight: 500;
+    height: 36px;
+	line-height: 36px;
+	border-radius: 0px;
+	outline: none !important;
+	box-shadow: none !important;
+	text-align: center;
+	border: 1px solid #eeeeee;
+	cursor: pointer;
+	@include transition;
+	&:hover{
+		background: $primary-color2;
+		color: #fff;
+		border-color: $primary-color2;
+	}
+}
+
+.overlay {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+}
+
+//--------- Start Banner Area -------------//
+.home-banner-area {
+    background: url(../img/header-bg.jpg) no-repeat center center/cover;
+    .overlay {
+        background: rgba(0, 0, 0, 0.18);
+    }
+}
+
+.banner-area {
+    background: url(../img/banner-bg.jpg) no-repeat center;
+    background-size: cover;
+	min-height: 300px;
+    margin-top: 64px;
+    @media(max-width: 992px) {
+        margin-top: 25px;
+	}
+	.overlay-bg {
+		background: rgba(0, 0, 0, 0.48);
+	}
+}
+
+.about-content {
+    margin-top: 60px;
+    padding: 50px 0px;
+    @media(max-width: 768px) {
+        margin-top: 75px;
+	}
+    @media(max-width: 576px) {
+        margin:120px 16px;
+	}
+	
+    h1 {
+        font-size: 60px;
+        @media ( max-width: 768px) {
+            font-size:35px;
+        }
+        @media ( max-width: 414px) {
+            font-size: 30px;
+        }
+	}
+	p {
+		margin: 0;
+	}
+    a {
+        color: $white;
+		font-size: 14px;
+		text-transform: uppercase;
+    }
+    .lnr {
+        margin: 0px 10px;
+        font-weight: 600;
+    }
+}
+
+.banner-content {
+    text-align: center;
+    h1 {
+        color: $white;
+        font-size: 48px;
+        font-weight: 300;
+        margin-bottom: 85px;
+        @media ( max-width:991px) {
+            font-size: 40px;
+            margin-bottom: 40px;
+        }
+        @media ( max-width:480px) {
+            font-size: 28px;
+			margin-bottom: 5px;
+			margin-top: 80px;
+        }
+    }
+}
+
+.search-field {
+    background-color: #fff;
+    padding: 40px;
+    .app-select {
+        border-radius: 0;
+        font-size: 13px;
+        font-weight: 300;
+        color: #777777;
+        @include media-breakpoint-down(lg) {
+            margin-bottom: 25px;
+        }
+    }
+    .form-control {
+        height: 40px;
+        padding: .6rem .75rem;
+    }
+    .nice-select.open .list {
+        width: 100%;
+    }
+    .range-wrap {
+        text-align: left;
+		margin-top: 10px;
+		@media ( max-width:991px) {
+            margin-bottom: 30px;
+        }
+	}
+	.primary-btn {
+		margin-top: 55px;
+		@media ( max-width:991px) {
+            margin-top: 0px;
+        }
+	}
+}
+
+.toggle-wrap {
+    margin-bottom: 20px;
+    .lnr-arrow-right {
+        font-size: 20px;
+        color: #222;
+        margin-left: 44px;
+        line-height: 40px;
+    }
+    .lnr-arrow-left {
+        font-size: 20px;
+        color: #222;
+        margin-right: 66px;
+        line-height: 40px;
+    }
+}
+
+.search-title {
+    min-width: 200px;
+}
+
+@include media-breakpoint-down(md) {
+    .search-title {
+        margin-bottom: 10px;
+    }
+    .onoffswitch3 {
+        text-align: -moz-center;
+        text-align: center;
+    }
+}
+
+.onoffswitch3 {
+    position: relative;
+    width: 120px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+}
+
+.onoffswitch3-checkbox {
+    display: none;
+}
+
+.onoffswitch3-label {
+    display: block;
+    overflow: hidden;
+    cursor: pointer;
+    border: 0px solid #999999;
+    border-radius: 0px;
+}
+
+.onoffswitch3-inner {
+    display: block;
+    width: 200%;
+    margin-left: -100%;
+    -moz-transition: margin 0.3s ease-in 0s;
+    -webkit-transition: margin 0.3s ease-in 0s;
+    -o-transition: margin 0.3s ease-in 0s;
+    transition: margin 0.3s ease-in 0s;
+}
+
+.onoffswitch3-inner>span {
+    display: block;
+    float: left;
+    position: relative;
+    width: 50%;
+    height: 40px;
+    line-height: 40px;
+    padding: 0;
+    font-size: 14px;
+    color: white;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.onoffswitch3-inner .onoffswitch3-active {
+    padding-left: 10px;
+    background-color: #EEEEEE;
+    color: #FFFFFF;
+}
+
+.onoffswitch3-inner .onoffswitch3-inactive {
+    padding-right: 10px;
+    background-color: #EEEEEE;
+    color: #FFFFFF;
+    text-align: right;
+}
+
+.onoffswitch3-switch {
+    display: block;
+    width: 50%;
+    margin: 0px;
+    text-align: center;
+    border: 0px solid #999999;
+    border-radius: 0px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+}
+
+.onoffswitch3-active .onoffswitch3-switch {
+    background: $primary-color;
+    left: 0;
+}
+
+.onoffswitch3-inactive .onoffswitch3-switch {
+    background: $primary-color;
+    right: 0;
+}
+
+.onoffswitch3-checkbox:checked+.onoffswitch3-label .onoffswitch3-inner {
+    margin-left: 0;
+}
+
+@media (max-width:414px) {
+    .fullscreen {
+        height: 100% !important;
+    }
+}
+
+@media (max-width:480px) {
+    .fullscreen {
+        height: 100% !important;
+    }
+}
+
+//--------- End Banner Area -------------//
+//--------- Start property Area -------------//
+
+.single-property {
+    background-color: $offwhite;
+    padding: 20px;
+    @include media-breakpoint-down(lg) {
+        margin-bottom: 30px;
+    }
+    @include transition();
+    &:hover {
+        background: #ffffff;
+        box-shadow: 0 8px 28px rgba(221, 221, 221, 0.72);
+        img {
+            transform: scale(1.09);
+        }
+    }
+}
+
+.images {
+    background: rgba(0, 0, 0, 0.9);
+    overflow: hidden;
+    img {
+        @include transition();
+        width: 100%;
+        opacity: .5;
+    }
+    span {
+        background: $primary-color;
+        color: #fff;
+        padding: 5px 25px;
+        margin-top: -60px;
+        position: absolute;
+        margin-left: 22px;
+    }
+}
+
+.desc {
+    .top {
+        padding: 25px 0;
+        a {
+            color: #222;
+        }
+    }
+    .middle {
+        padding-bottom: 5px;
+        p {
+            width: 33%;
+            @media(max-width: 1024px) and (min-width:992px) {
+                font-size: 11px;
+            }
+        }
+        .gr {
+            color: #1fe111;
+        }
+        .rd {
+            color: #f40f68;
+        }
+    }
+    .bottom {
+        border-top: 1px solid rgba(204, 204, 204, 0.39);
+        padding-top: 15px;
+        p {
+            width: 40%;
+			margin-bottom: 0px;
+			@media ( max-width:380px) {
+				font-size: 11px;
+			}
+            span {
+                margin-right: 5px;
+            }
+        }
+    }
+    @media(max-width:1280px) and (min-width: 988px) {
+        .desc .middle p {
+            font-size: 10px;
+        }
+    }
+}
+
+@media(max-width:414px) {
+    .desc .middle p {
+        font-size: 10px;
+    }
+}
+
+//--------- End property Area -------------//
+//--------- start city Area -------------//
+.single-packages .title {
+    color: #1a1a1a;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.content {
+    position: relative;
+    max-width: 100%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.content .content-overlay {
+    background: $primary-color;
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    opacity: 0;
+    -webkit-transition: all 0.4s ease-in-out 0s;
+    -moz-transition: all 0.4s ease-in-out 0s;
+    transition: all 0.4s ease-in-out 0s;
+}
+
+.content-overlay {
+    margin: 20px;
+}
+
+.content:hover .content-overlay {
+    opacity: .8;
+}
+
+.content-details {
+    position: absolute;
+    text-align: center;
+    padding-left: 1em;
+    padding-right: 1em;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    opacity: 0;
+    -webkit-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    -webkit-transition: all 0.3s ease-in-out 0s;
+    -moz-transition: all 0.3s ease-in-out 0s;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.content-title {
+    font-size: 18px;
+    color: $white;
+    font-weight: 500;
+}
+
+.content:hover .content-details {
+    top: 50%;
+    left: 50%;
+    opacity: 1;
+}
+
+.content-image {
+    width: 100%;
+}
+
+.content-details p {
+    color: #fff;
+    font-size: 0.8em;
+}
+
+.fadeIn-bottom {
+    top: 80%;
+}
+
+@media(max-width:768px) {
+    .city-bottom .mt-30 {
+        margin-top: 14px;
+    }
+}
+
+//--------- end city Area -------------//
+//--------- start about Area -------------//
+.about-area {
+	background: $offwhite;
+	@media(max-width: 1024px) {
+        padding: 60px 0px;
+	}
+	@media(max-width: 991px) {
+        padding-bottom: 0px;
+	}
+	.single-about {
+		margin-bottom: 40px;
+		@media(max-width: 1024px) {
+			margin-bottom: 28px;
+		}
+        &:last-child {
+            margin-bottom: 0;
+            @media(max-width: 992px) {
+                margin-bottom: 30px;
+            }
+        }
+    }
+    h4 {
+        margin-bottom: 15px;
+        @media(max-width: 120px) {
+            margin-bottom:5px;
+        }
+    }
+    p {
+        margin: 0;
+    }
+}
+
+.about-left {
+    padding-left: 21%;
+    padding-right: 3%;
+    @media(max-width: 1280px) {
+        padding-left: 2%;
+        .pb-30 {
+            padding-bottom: 0px;
+        }
+	}
+	@media(max-width: 991px) {
+        padding-left: 13%;
+	}
+	@media(max-width: 776px) {
+        padding-left: 5%;
+        padding-bottom: 30px;
+    }
+    @include media-breakpoint-down(md) {
+        padding-bottom: 50px;
+    }
+}
+
+.about-right {
+    img {
+        width: 100%;
+    }
+}
+
+//--------- end about Area -------------//
+/*--------- Start testimonial Area -------------*/
+
+.testomial-area {
+    background-color: $offwhite;
+    .owl-carousel .owl-item img {
+        width: auto !important;
+    }
+    .owl-dots {
+        text-align: center;
+        bottom: 5px;
+        margin-top: 80px;
+        width: 100%;
+        -webkit-backface-visibility: hidden;
+        -moz-backface-visibility: hidden;
+        -ms-backface-visibility: hidden;
+		backface-visibility: hidden;
+		@media(max-width: 992px) {
+            display: none!important;
+        }
+    }
+    .owl-dot {
+        height: 10px;
+		width: 10px;
+		border-radius: 6px;
+        display: inline-block;
+        background: rgba(127, 127, 127, 0.5);
+        margin-left: 5px;
+        margin-right: 5px;
+        @include transition();
+    }
+    .owl-dot.active {
+        @include transition;
+        background: $primary-color;
+    }
+    @media(max-width:414px) {
+        .active-tstimonial-carusel {
+            padding: 30px;
+        }
+    }
+}
+
+.single-testimonial {
+    text-align: center;
+    padding: 30px;
+    text-align: center;
+    background: $white;
+    @include transition();
+    border: 1px solid #eee;
+    h4 {
+        text-transform: uppercase;
+        @include transition();
+    }
+    .desc {
+        padding: 30px 0px;
+    }
+    &:hover {
+        cursor: pointer;
+        h4 {
+            color: $primary-color;
+        }
+    }
+    @media(max-width:575px) {
+        margin: 15px;
+    }
+}
+
+/*--------- End testimonial Area -------------*/
+
+/*--------- start blog Area -------------*/
+
+
+.single-blog {
+	@media(max-width: 991px) {
+		margin-bottom: 40px;
+	}
+    .thumb {
+        overflow: hidden;
+        img {
+            width: 100%;
+            @include transition();
+        }
+    }
+    &:hover {
+        img {
+            transform: scale(1.1);
+        }
+        h4 {
+            color: $primary-color;
+        }
+    }
+    h4 {
+		margin-top: 40px;
+		margin-bottom: 16px;
+		@media(max-width: 991px) {
+			margin-top: 20px;
+			margin-bottom: 8px;
+		}
+        @include transition();
+    }
+    .text-wrap {
+        margin-right: 35px;
+        margin-bottom: 35px;
+        @media(max-width: 991px) {
+			margin-right: 0px;
+			margin-bottom: 12px;
+		}
+	}
+	.meta-bottom {
+		p {
+			margin-right: 25px;
+		}
+	}
+	p {
+		margin: 0;
+	}
+    a {
+        color: $black;
+    }
+    @media(max-width:991px) {
+        margin-bottom: 30px;
+    }
+}
+
+/*--------- end blog Area -------------*/
+
+//--------- start team Area -------------//
+
+.team-area{	
+    background-color:$offwhite;
+    padding: 120px 0px 80px;
+	@media(max-width: 1024px) {
+        padding: 80px 0px 40px;
+    }
+    @media(max-width: 992px) {
+        padding: 60px 0px 20px;
+    }
+    .single-team {
+        margin-bottom: 40px;
+    }
+	.thumb {
+	    position: relative;
+	}
+
+	.thumb div {
+	    position: absolute;
+	    width: 100%;
+	    height: 100%;
+	    top: 0;
+	    left: 0;
+        background: rgba($primary-color2, 0.75);
+	    color: #fff;
+	    opacity: 0;
+	    transition: opacity 0.5s;
+	    i{
+	    	color:#fff;
+	    	font-size:20px;
+			padding:10px;
+			z-index:9999;
+	    }
+	}
+	.thumb img {
+	    display: block;
+	    width:100%
+	}
+
+	.thumb div span{
+	    display: block;
+	    position: absolute;
+	    bottom: 30px;
+	    left: 20px;
+	    text-transform:uppercase;
+	    font-size:18px;
+	    font-weight:600;
+	    letter-spacing:3px;
+	}
+
+	.thumb div p{
+	    display: block;
+	    position: absolute;
+	    bottom: 10px;
+	    left: 20px;
+        font-weight:100;
+	    @media( max-width:768px){
+			bottom:-15px;
+	    }
+	}
+
+	.thumb:hover div {
+	    cursor:pointer;
+	    opacity:1;
+	}
+    .meta-text {
+        margin-top: 30px;
+        @media( max-width:576px){
+			margin-top: 20px;
+	    }
+        p {
+            margin: 0;
+        }
+    }
+
+}
+
+//--------- end team Area -------------//
+
+//--------- contact_area css -------------//
+
+.contact_info{
+    .info_item{
+        position: relative;
+        padding-left: 45px;
+        i{
+            position: absolute;
+            left: 0;
+            top: 0;
+            font-size: 20px;
+            line-height: 24px;
+            color: $primary-color;
+            font-weight: 600;
+        }
+        h6{
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 0px;
+            color: $title-color;
+            a{
+                color: $title-color;
+            }
+        }
+        p{
+            font-size: 14px;
+            line-height: 24px;
+            padding: 2px 0px;
+        }
+    }
+}
+.contact_form{
+    .form-group{
+        margin-bottom: 10px;
+        .form-control{
+            font-size: 13px;
+            line-height: 26px;
+            color: #999;
+            border: 1px solid #eeeeee;
+            border-radius: 0px;
+            padding-left: 20px;
+            &:focus{
+                box-shadow: none;
+                outline: none;
+            }
+        }
+        textarea{
+			resize: none;
+            &.form-control{
+                height: 140px;
+            }
+        }
+    }
+    .primary-btn{
+        height: 50px;
+        line-height: 50px;
+        margin-top: 20px;
+        padding: 0px 34px;
+        border-radius: 0px;
+    }
+}
+
+
+//----------- Contact Success and error Area css -------------//
+
+
+//----------- Start Generic Page -------------//
+.whole-wrap {
+    background-color: $white;
+}
+
+.generic-banner {
+    background-color: $primary-color;
+    .height {
+        height: 600px;
+        @include media-breakpoint-down (sm) {
+            height: 400px;
+        }
+    }
+    .generic-banner-content {
+        h2 {
+            line-height: 1.2em;
+            margin-bottom: 20px;
+            br {
+                @include media-breakpoint-down (md) {
+                    display: none;
+                }
+            }
+        }
+        p {
+            text-align: center;
+            font-size: 16px;
+            br {
+                @include media-breakpoint-down (md) {
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+.generic-content {
+    h1 {
+        font-weight: 600;
+    }
+}
+
+.about-generic-area {
+    background: $white;
+    .border-top-generic {
+        border-top: 1px dotted #eee;
+    }
+    p {
+        margin-bottom: 20px;
+    }
+}
+
+.white-bg {
+    background: $white;
+}
+
+.section-top-border {
+    padding: 70px 0;
+    border-top: 1px dotted #eee;
+}
+
+.switch-wrap {
+    margin-bottom: 10px;
+    p {
+        margin: 0;
+    }
+}
+
+//----------- End Generic Page -------------//
